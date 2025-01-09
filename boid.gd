@@ -38,7 +38,6 @@ func _process(delta: float) -> void:
 
 	var target = impetus * Vector2.RIGHT.rotated(rotation) + alignment_target * alignment + cohesion_target * cohesion + separation_target * separation
 	var bearing = target.normalized()
-	
 	translate(bearing * speed * delta * timescale)
 	rotation = bearing.angle()
 	
