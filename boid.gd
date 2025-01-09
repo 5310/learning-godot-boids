@@ -35,8 +35,7 @@ func _process(delta: float) -> void:
 		var distance = neighbor.position - position
 		if distance.length() < radius:
 			separation_target -= distance.normalized() * (radius - distance.length())
-	
-	print(alignment)
+
 	var target = impetus * Vector2.RIGHT.rotated(rotation) + alignment_target * alignment + cohesion_target * cohesion + separation_target * separation
 	var bearing = target.normalized()
 	
