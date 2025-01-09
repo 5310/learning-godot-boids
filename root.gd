@@ -5,11 +5,11 @@ extends Node2D
 var boid_scene = preload("res://boid.tscn")
 
 @export_range(0, 100) var speed: float = 1.0
-@export_range(0, 200) var range: int = 20
+@export_range(0, 100) var range: int = 20
 @export_range(0, 100) var radius: float = 20
 @export_range(0, 1) var separation: float = 0.01
-@export_range(0, 1) var alignment: float = 0.05
-@export_range(0, 1) var cohesion: float = 0.005
+@export_range(0, 1) var alignment: float = 0.01
+@export_range(0, 1) var cohesion: float = 0.01
 
 
 func _ready() -> void:
@@ -22,8 +22,3 @@ func _ready() -> void:
 		boid.alignment = alignment
 		boid.cohesion = cohesion
 		add_child(boid)
-	pass
-
-
-func _process(delta: float) -> void:
-	pass
