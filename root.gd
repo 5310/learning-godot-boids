@@ -4,7 +4,7 @@ extends Node2D
 @export_range(20, 500) var population: int = 200
 var boid_scene = preload("res://boid.tscn")
 
-@export_range(0b00, 0b11, 0b1) var optimization: int = 0b00
+#@export_range(0b00, 0b11, 0b1) var optimization: int = 0b00
 @export_range(0, 100) var speed: float = 1
 @export_range(0, 100) var range: float = 50
 @export_range(0, 100) var radius: float = 20
@@ -21,7 +21,7 @@ func _ready() -> void:
 		add_child(boid)
 
 func _process(delta: float) -> void:
-	Boid.optimization = optimization
+	#Boid.optimization = optimization
 	Boid.speed = speed
 	Boid.range = range
 	Boid.radius = radius
